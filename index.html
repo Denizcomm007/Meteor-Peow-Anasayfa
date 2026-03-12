@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="tr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Meteor Peow - Deniz ÇOM tarafından geliştirilen en gelişmiş meteor yok etme deneyimi.">
+    <title>Meteor Peow | Deniz ÇOM</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@300;500;700&display=swap');
+
+        body {
+            background-color: #050505;
+            color: #e0e0e0;
+            font-family: 'Rajdhani', sans-serif;
+        }
+
+        .font-special { font-family: 'Orbitron', sans-serif; }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .glass-card:hover {
+            border-color: #f59e0b;
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px -15px rgba(245, 158, 11, 0.2);
+        }
+
+        .hero-gradient {
+            background: radial-gradient(circle at 50% 50%, rgba(124, 58, 237, 0.12) 0%, transparent 80%);
+        }
+
+        .btn-download {
+            background: linear-gradient(90deg, #f59e0b 0%, #ef4444 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-download::after {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%;
+            width: 100%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: 0.5s;
+        }
+
+        .btn-download:hover::after { left: 100%; }
+
+        .img-fallback {
+            background: #0f0f0f;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 320px;
+        }
+    </style>
+</head>
+<body class="selection:bg-orange-500 selection:text-white">
+
+    <nav class="fixed w-full z-50 bg-black/90 backdrop-blur-lg border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex items-center">
+                    <span class="text-2xl font-bold font-special tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-600">
+                        METEOR PEOW
+                    </span>
+                </div>
+                <div class="hidden md:flex items-center space-x-10 text-xs font-bold uppercase tracking-[0.2em]">
+                    <a href="#home" class="hover:text-orange-400 transition-colors">Ana Sayfa</a>
+                    <a href="https://github.com/denizcomm007" target="_blank" class="hover:text-orange-400 transition-colors">GitHub</a>
+                    <a href="#editions" class="hover:text-orange-400 transition-colors">Edisyonlar</a>
+                    <a href="#developer" class="hover:text-orange-400 transition-colors">Yapımcı</a>
+                    <a href="https://denizcomm007.github.io/Meteor-Peow-/" target="_blank" 
+                       class="px-6 py-2.5 rounded-full bg-orange-600 text-white font-bold hover:bg-orange-700 transition-all shadow-lg shadow-orange-900/20">
+                        HEMEN İNDİR
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="relative pt-48 pb-32 px-4 hero-gradient overflow-hidden">
+        <div class="max-w-7xl mx-auto text-center relative z-10">
+            <h1 class="text-5xl md:text-8xl font-bold mb-8 tracking-tighter font-special text-white uppercase italic leading-none">
+                UZAYIN <span class="text-orange-500 text-glow">DERİNLİKLERİNDE</span><br>HAYATTA KAL
+            </h1>
+            <p class="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mb-12 leading-relaxed">
+                Ultimate Meteor ve Zombi Avı tarafından desteklenen en gelişmiş meteor yok etme deneyimi.
+            </p>
+            <div class="flex flex-wrap justify-center gap-6">
+                <a href="https://denizcomm007.github.io/Meteor-Peow-/" target="_blank" class="btn-download px-10 py-5 rounded-full text-lg font-bold text-white flex items-center gap-3">
+                    <i class="fas fa-rocket"></i> OYUNU BAŞLAT
+                </a>
+                <a href="#editions" class="px-10 py-5 rounded-full border border-white/10 hover:bg-white/5 transition-all text-lg font-bold">
+                    SÜRÜMLERİ KEŞFET
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="editions" class="py-32 px-4 bg-zinc-950">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col items-center mb-20">
+                <h2 class="text-4xl md:text-6xl font-bold mb-4 font-special uppercase">SÜRÜMLER</h2>
+                <div class="h-1.5 w-24 bg-gradient-to-r from-orange-500 to-red-600 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div class="glass-card rounded-3xl overflow-hidden relative group">
+                    <div class="absolute top-4 right-4 px-3 py-1 bg-red-600 text-white text-[10px] font-bold rounded-full z-20 uppercase">Horror</div>
+                    <div class="img-fallback relative overflow-hidden">
+                        <img src="12938.png" alt="Horror Edition" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'" class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="hidden absolute inset-0 items-center justify-center bg-zinc-900"><i class="fas fa-ghost text-5xl text-red-600"></i></div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold mb-3 font-special uppercase">HORROR EDITION</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-6">Karanlık atmosfer, gerilim dolu anlar ve kırmızı galaksilerin gizemi.</p>
+                        <a href="https://denizcomm007.github.io/Meteor-Peow-/" class="inline-flex items-center gap-2 text-orange-500 font-bold hover:gap-4 transition-all uppercase text-xs tracking-widest">Hemen Oyna <i class="fas fa-chevron-right text-[10px]"></i></a>
+                    </div>
+                </div>
+
+                <div class="glass-card rounded-3xl overflow-hidden relative group border-yellow-500/20">
+                    <div class="absolute top-4 right-4 px-3 py-1 bg-yellow-500 text-black text-[10px] font-bold rounded-full z-20 uppercase">Premium</div>
+                    <div class="img-fallback relative overflow-hidden">
+                        <img src="12937.png" alt="Premium Gold" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'" class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="hidden absolute inset-0 items-center justify-center bg-zinc-900"><i class="fas fa-crown text-5xl text-yellow-500"></i></div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold mb-3 font-special text-yellow-500 uppercase">ULTIMATE PREMIUM</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-6">Lüks tasarım, geliştirilmiş efektler ve altın vuruş gücü.</p>
+                        <a href="https://denizcomm007.github.io/Meteor-Peow-/" class="inline-flex items-center gap-2 text-yellow-500 font-bold hover:gap-4 transition-all uppercase text-xs tracking-widest">Hemen Oyna <i class="fas fa-chevron-right text-[10px]"></i></a>
+                    </div>
+                </div>
+
+                <div class="glass-card rounded-3xl overflow-hidden relative group">
+                    <div class="absolute top-4 right-4 px-3 py-1 bg-blue-600 text-white text-[10px] font-bold rounded-full z-20 uppercase">Classic</div>
+                    <div class="img-fallback relative overflow-hidden">
+                        <img src="12939.png" alt="Classic Neon" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'" class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="hidden absolute inset-0 items-center justify-center bg-zinc-900"><i class="fas fa-rocket text-5xl text-blue-500"></i></div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold mb-3 font-special uppercase">NEON EDITION</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-6">Klasik uzay derinliği, canlı renkler ve yüksek hız performansı.</p>
+                        <a href="https://denizcomm007.github.io/Meteor-Peow-/" class="inline-flex items-center gap-2 text-orange-500 font-bold hover:gap-4 transition-all uppercase text-xs tracking-widest">Hemen Oyna <i class="fas fa-chevron-right text-[10px]"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="developer" class="py-32 px-4 bg-black relative">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="mb-10 inline-block p-6 rounded-full bg-gradient-to-tr from-orange-500 to-red-600 shadow-2xl shadow-orange-600/20">
+                <i class="fas fa-user-astronaut text-5xl text-white"></i>
+            </div>
+            <h2 class="text-lg text-orange-500 font-special tracking-[0.3em] mb-4 uppercase">Yapımcı</h2>
+            <h3 class="text-5xl font-bold mb-10 text-white uppercase tracking-tight">Deniz ÇOM</h3>
+            
+            <div class="glass-card p-12 rounded-[2rem] border-white/5">
+                <p class="text-xl text-gray-400 italic leading-relaxed mb-10">
+                    "Meteor Peow, oyun tutkusunu ve teknik beceriyi bir araya getiren bir projedir. Amacımız oyunculara en akıcı ve görsel olarak tatmin edici uzay savaşlarını sunmaktır."
+                </p>
+                
+                <div class="flex flex-col md:flex-row items-center justify-center gap-8">
+                    <a href="https://github.com/denizcomm007" target="_blank" class="flex items-center gap-3 bg-white/5 px-8 py-4 rounded-2xl hover:bg-white/10 transition-all border border-white/10 group">
+                        <i class="fab fa-github text-2xl group-hover:text-orange-500 transition-colors"></i>
+                        <span class="font-bold tracking-widest">denizcomm007</span>
+                    </a>
+                    <a href="mailto:commdeniz0007@gmail.com" class="group flex flex-col items-center md:items-start">
+                        <span class="text-gray-600 uppercase text-[10px] tracking-widest mb-1">E-Posta</span>
+                        <span class="text-xl font-light group-hover:text-orange-400 transition-colors">commdeniz0007@gmail.com</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-16 border-t border-white/5 text-center text-gray-600">
+        <div class="max-w-7xl mx-auto px-4">
+            <p class="mb-6 text-sm tracking-widest uppercase">&copy; 2024 Meteor Peow. Tüm hakları saklıdır.</p>
+            <div class="flex justify-center gap-8 mb-8 text-2xl">
+                <a href="https://github.com/denizcomm007" target="_blank" class="hover:text-white transition-all transform hover:scale-125">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="#" class="hover:text-white transition-all transform hover:scale-125">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+            <p class="text-[10px] uppercase tracking-[0.3em] opacity-50">Powered by <span class="text-orange-900 font-bold">Ultimate meteor and Zombi avı</span></p>
+        </div>
+    </footer>
+
+    <a href="#home" class="fixed bottom-10 right-10 w-14 h-14 bg-orange-600 rounded-full flex items-center justify-center text-white shadow-2xl hover:bg-orange-700 hover:-translate-y-2 transition-all z-40 group">
+        <i class="fas fa-chevron-up group-hover:scale-125 transition-transform"></i>
+    </a>
+
+</body>
+</html>
